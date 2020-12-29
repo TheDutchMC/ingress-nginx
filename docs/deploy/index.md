@@ -15,10 +15,9 @@
 
 !!! attention
     The first time the ingress controller starts, two [Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/) create the SSL Certificate used by the admission webhook.
-    For this reason, there is an initial delay of up to two minutes until it is possible to create and validate Ingress definitions.
-
+    For this reason, there is an initial delay of up to two minutes until it is possible to create and validate Ingress definitions.  
     You can wait until it is ready to run the next command:
-
+    
     ```yaml
     kubectl wait --namespace ingress-nginx \
       --for=condition=ready pod \
